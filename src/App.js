@@ -44,12 +44,24 @@ function App() {
     <div className="App">
       {
         Object.keys(covid).map((val,ind) => {
-          return <li key={ind} >
-            <h3 style={{backgroundColor:'lightGreen', textTransform:'uppercase'}}> {val.replace(/_/g,' ')}</h3>
-            <hr />
-            <h4 style={{backgroundColor:'pink'}}>{covid[val]}</h4>
 
-          </li>
+          return <table style={{marginLeft:600,marginTop:60,textAlign:'center',width:'40%' ,border: '1px solid black',borderCollapse: 'collapse',borderBlock:'black'
+          }}>
+          <tr key={ind}>
+            <th style={{width:'100%' ,border: '5px',borderColor:'black',borderCollapse: 'collapse' , padding:'5px' , textAlign:'left'
+          }}>{val}:</th>
+            <td style={{width:'100%' ,border: '1px',borderCollapse: 'collapse', padding:'5px' , textAlign:'center'
+          }}>{covid[val]}</td>
+          </tr>
+          
+          
+        </table>
+          // return <li key={ind} >
+          //   <h3 style={{backgroundColor:'lightGreen', textTransform:'uppercase'}}> {val.replace(/_/g,' ')}</h3>
+          //   <hr />
+          //   <h4 style={{backgroundColor:'pink'}}>{covid[val]}</h4>
+
+          // </li>
         })
       }
     </div>
