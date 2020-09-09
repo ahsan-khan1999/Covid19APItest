@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import GlobalData from './GlobalData'
 import './App.css';
 import BottomNav from './BottomNav';
-import CountryData from './CountryData';
+
 import ConditionalRender from './ConditionalRender';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
   return(
 <div>
   <ConditionalRender stat={ren}/>
+  {/* <Graphs /> */}
   <BottomNav stat={ren}/>
   </div>
   )

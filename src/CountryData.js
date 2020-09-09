@@ -13,14 +13,14 @@ function CountryData() {
 
       let data = await response.json();
     //   setCovid(data.Countryitems);
-      
-      
+
+
       console.log(Object.values(Object.values(data.countryitems)[0]));
         // console.log(country);
         setCountry(Object.values(Object.values(data.countryitems)[0]))
 
-      
-      
+
+
     }
     data()
   }
@@ -37,7 +37,7 @@ function CountryData() {
       <Grid container spacing={3}>
         {
           Object.keys(country).map((value, ind) => {
-            return <Grid item xs={12} sm={4} key={ind}>
+            return <Grid item xs={12} sm={3} key={ind}>
               <Paper className={classes.paper} elevation={3}>
                 <h2 style={{color:'purple'}}>{country[ind].title}</h2>
                 <h3 style={{color:'green'}}>{country[ind].total_cases}</h3>
